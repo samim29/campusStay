@@ -15,6 +15,8 @@ app.use(express.urlencoded({extended:true}));
 const authRoutes = require("./routes/authRoutes");
 app.use("/api/auth",authRoutes);
 
+const listingRoutes = require("./routes/listingRoutes");
+app.use("/api/listings", listingRoutes);
 
 connectDB();
 app.listen(port,()=>{
